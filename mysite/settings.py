@@ -25,7 +25,7 @@ SECRET_KEY = 'egak2#!p%v)(59zmk(j9np=jmh)8s*3%32=f#)7jkhi!fm29za'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['anamorfoza.pythonanywhere.com']
 
 
 # Application definition
