@@ -6,17 +6,13 @@
         <div>
             <h1><a href="">Django Girls Blog</a></h1>
         </div>
-
-        <div>
-            <p>published: 19.11.2016, 15:16</p>
-            <h2><a href="">O mnie</a></h2>
-            <p>Ja to ja, po co drążyć temat.</p>
-        </div>
-
-        <div>
-            <p>published: 19.11.2016, 15:16</p>
-            <h2><a href="">O anamorfozie</a></h2>
-            <p> W malarstwie anamorfoza oznacza wynaturzone rzutowanie albo zdeformowane przedstawienie kilku obrazów na płaszczyźnie, które jednak z pewnego punktu obserwacji lub po dobiciu w odpowiedniej powierzchni lustrzanej okazuje się regularne i wykonane według właściwych proporcji. Nasuwają się pytania: jaka zasada geometryczna opisuje te przekształcenia? jak je poklasyfikować? czy owe sztuczki perspektywiczne mają zastosowanie we współczesnym świecie? Na te oraz wiele innych pytań próbuje odpowiedzieć nam matematyka, ukazując kolejny ścisły związek między nią a sztuką.</p>
-        </div>
-    </body>
+        
+        	{% for post in posts %}
+    			<div>
+      			 	<p>published: {{ post.published_data }}</p>
+        			<h1><a href="">{{ post.title }}</a></h1>
+       				 <p>{{ post.text|linebreaksbr }}</p>
+    			</div>
+    	{% endfor %}
+       
 </html>
